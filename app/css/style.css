@@ -1,0 +1,50 @@
+.h100 {
+  height: 100%; }
+
+body {
+  font-family: "Lora", serif;
+  background-color: #79787f; }
+
+button:focus {
+  outline: none; }
+
+.logo {
+  position: relative;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  z-index: 2; }
+
+nav {
+  position: relative;
+  z-index: 2; }
+  nav:before, nav:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.23); }
+  nav:before {
+    top: 0; }
+  nav:after {
+    bottom: 0; }
+  nav ul.menu {
+    margin: 20px 0; }
+    nav ul.menu li {
+      margin-right: 40px !important; }
+      nav ul.menu li.active a {
+        color: #f74860; }
+      nav ul.menu li a {
+        color: #fff;
+        -webkit-transition: color 0.3s;
+        transition: color 0.3s;
+        text-decoration: none; }
+        nav ul.menu li a:hover, nav ul.menu li a:focus {
+          color: #f74860;
+          -webkit-transition: color 0.3s;
+          transition: color 0.3s; }
+
+.owl-carousel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh; }
