@@ -3,9 +3,7 @@
 }
 
 @media (max-width: 991px) {
-    .map{
-        margin-top: 40px;
-    }
+
 }
 
 @media (max-width: 991px) and (min-width: 768px) {
@@ -14,65 +12,11 @@
 }
 
 @media (max-width: 768px) {
-    section#testimonials{
-        .sectHeading{
-            h2{
-                font-size: 28px;
-            }
-        }
-    }
-    .menuTop{
-        ul.menu{
-            z-index: 2;
-            width: 200px;
-            position: absolute;
-            left: -200px;
-            top: 70px;
-            display: block;
-            background-color: #1e1d24;
-            border-right: 1px solid #fff;
-            transition: left 0.3s;
-            li.menuItem{
-                display: block;
-                margin-bottom: 15px;
-                padding: 15px;
-                a{
-                    font-size: 16px;
-                    font-weight: normal;
-                }
-            }
-            &.anim{
-                left: 0;
-                transition: left 0.3s;
-            }
-        }
-    }
-    section#hours {
-        .countDown {
-            font-size: 30px;
-            p.subtitle{
-                font-size: 16px;
-            }
-            .point{
-                width: 8px;
-                height: 8px;
-                background-color: #fff;
-                border-radius: 50%;
-                margin: 0 10px 10px;
-            }
-        }
-    }
+   
 }
 
 @media (max-width: 576px) {
-    header{
-        min-height: 0;
-    }
-    .blockText{
-        h1{
-            font-size: 40px;
-        }
-    }
+
 }
 
 // @media (max-width: 420px) {
