@@ -3,7 +3,20 @@
 }
 
 @media (max-width: 991px) {
+    .owl-carousel {
+        height: 50vw;
+        min-height: 500px;
+    .item{
+        .backgr{
+            min-height: 500px;
+            height: 50vw;
+            width: 100%;
 
+        }
+        // .container, .row{
+        //     height: 50vw;
+        // }
+}}
 }
 
 @media (max-width: 991px) and (min-width: 768px) {
