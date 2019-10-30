@@ -16,12 +16,15 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/hamburgers.min.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/media.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/wow.min.js"></script>
+    <script src="js/slick.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
@@ -34,20 +37,31 @@
     <header>
 
         <div class="topMenuOnSm d-flex align-items-center d-lg-none">
-            <button class="d-block d-lg-none" id="togglerMenu" type="button">
-                <span class="line">
+            <button class="hamburger hamburger--slider" type="button">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
                 </span>
             </button>
             <div class="logo">
-                <img src="img/logo-default-141x35.png" alt="">
+                <a href="#"><img src="img/logo-default-141x35.png" alt=""></a>
             </div>
+
+            <ul class="menuOnSm list-unstyled d-lg-none">
+                <li class="menuItem text-uppercase active"><a href="#" class="text-decoration-none">home</a></li>
+                <li class="menuItem text-uppercase"><a href="#" class="text-decoration-none">pages</a></li>
+                <li class="menuItem text-uppercase"><a href="#" class="text-decoration-none">blog</a></li>
+                <li class="menuItem text-uppercase"><a href="#" class="text-decoration-none">gallery</a></li>
+                <li class="menuItem text-uppercase"><a href="#" class="text-decoration-none">elements</a></li>
+                <li class="menuItem text-uppercase"><a href="#" class="text-decoration-none">shop</a></li>
+            </ul>
+
         </div>
 
         <div class="container">
             <div class="row">
                 <div class="col">
                     <div class="logo text-center d-none d-lg-block">
-                        <img src="img/logo-inverse-141x35.png" alt="">
+                        <a href="#"><img src="img/logo-inverse-141x35.png" alt=""></a>
                     </div>
                 </div>
             </div>
@@ -114,6 +128,319 @@
         </div>
 
     </header>
+
+
+    <section id="flowers">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="heading">
+                        <h2>Bouquets</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="boxFlower text-center">
+                        <img src="img/box-nina-img-01-269x331.jpg" class="img-fluid" alt="">
+                        <a href="#" class="text-decoration-none">
+                            <h3 class="text-uppercase">white roses</h3>
+                        </a>
+                        <p class="price">$30.00</p>
+                        <p class="new">new</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="boxFlower text-center">
+                        <img src="img/box-nina-img-02-269x331.jpg" class="img-fluid" alt="">
+                        <a href="#" class="text-decoration-none">
+                            <h3 class="text-uppercase">peonies</h3>
+                        </a>
+                        <p class="price">$13.00</p>
+                        <p class="sale">sale</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="boxFlower text-center">
+                        <img src="img/box-nina-img-03-269x331.jpg" class="img-fluid" alt="">
+                        <a href="#" class="text-decoration-none">
+                            <h3 class="text-uppercase">lilies</h3>
+                        </a>
+                        <p class="price">$16.99</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="boxFlower text-center">
+                        <img src="img/box-nina-img-04-269x331.jpg" class="img-fluid" alt="">
+                        <a href="#" class="text-decoration-none">
+                            <h3 class="text-uppercase">tulips</h3>
+                        </a>
+                        <p class="price">$13.00</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="boxFlower text-center">
+                        <img src="img/box-nina-img-05-269x331.jpg" class="img-fluid" alt="">
+                        <a href="#" class="text-decoration-none">
+                            <h3 class="text-uppercase">NARCISSUSES</h3>
+                        </a>
+                        <p class="price">$30.00</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="boxFlower text-center">
+                        <img src="img/box-nina-img-06-269x331.jpg" class="img-fluid" alt="">
+                        <a href="#" class="text-decoration-none">
+                            <h3 class="text-uppercase">red roses</h3>
+                        </a>
+                        <p class="price"><s>$30.00</s><span class="salePrice">$16.99</span> </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="boxFlower text-center">
+                        <img src="img/box-nina-img-07-269x331.jpg" class="img-fluid" alt="">
+                        <a href="#" class="text-decoration-none">
+                            <h3 class="text-uppercase">irises</h3>
+                        </a>
+                        <p class="price">$30.00</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="boxFlower text-center">
+                        <img src="img/box-nina-img-08-269x331.jpg" class="img-fluid" alt="">
+                        <a href="#" class="text-decoration-none">
+                            <h3 class="text-uppercase">violets</h3>
+                        </a>
+                        <p class="price">$30.00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="digits" class="parallax-window" data-parallax="scroll" data-speed="0.8"
+        data-image-src="img/parallax-2.jpg">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-3 col-sm-6">
+                    <p class="digit notAnim text-center" data-digit="245">0</p>
+                    <p class="text-center">Flower Arrangements</p>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <p class="digit notAnim text-center" data-digit="182">0</p>
+                    <p class="text-center">Impressive Bouquets</p>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <p class="digit notAnim text-center" data-digit="300">0</p>
+                    <p class="text-center">Satisfied clients</p>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <p class="digit notAnim text-center" data-digit="47">0</p>
+                    <p class="text-center">Partners throughout Worldwide</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="accord">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-6">
+                    <div class="imgWrap">
+                        <img src="img/index-img-520x430.jpg" class="img-fluid" alt="">
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="accordWrap">
+
+                        <div class="heading text-center text-md-left">
+                            <h2>why organic</h2>
+                        </div>
+
+                        <div class="accordion" id="accordionExample">
+                            <div class="card">
+                                <div class="card-header" id="headingOne">
+                                    <h2 class="mb-0 d-flex align-items-center">
+                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                            data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            <i class="fas fa-angle-right"></i>Memorable experience
+                                        </button>
+                                    </h2>
+                                </div>
+
+                                <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
+                                    data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        When you come to our shop, you will always be greeted in a warm,
+                                        friendly and approachable manner. No tired faces, no stressed out or rushed
+                                        service,
+                                        and no leaving the store without us saying “thanks”.</div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header" id="headingTwo">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                            data-target="#collapseTwo" aria-expanded="false"
+                                            aria-controls="collapseTwo">
+                                            <i class="fas fa-angle-right"></i>qualified florists
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                    data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        Florium florists are all highly experienced, creative, friendly, and reliable.
+                                        We specialize in modern and impressive floral designs and we are extremely
+                                        passionate about flowers,
+                                        protecting our environment and ensuring our clients are very happy!</div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header" id="headingThree">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                            data-target="#collapseThree" aria-expanded="false"
+                                            aria-controls="collapseThree">
+                                            <i class="fas fa-angle-right"></i>Affordable pricing
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                                    data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        Our arrangements are affordable, and our pricing is very competitive. We believe
+                                        that
+                                        breathtaking elegance should be achievable on any budget! That’s also one of the
+                                        reasons why our regular clients and partners value our flower shop.</div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="container bonus">
+            <div class="row">
+
+                <div class="col-lg-4">
+                    <div class="wrapBlock d-flex align-items-center justify-content-center justify-content-lg-left">
+                        <div>
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h5 class="text-uppercase"><a href="#" class="text-decoration-none">free shipping</a></h5>
+                            <p>Enjoy our fast & free delivery</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="wrapBlock d-flex align-items-center justify-content-center justify-content-lg-left">
+                        <div>
+                            <i class="far fa-comments"></i>
+                        </div>
+                        <div>
+                            <h5 class="text-uppercase"><a href="#" class="text-decoration-none">CUSTOMER CARE</a></h5>
+                            <p>Always ready to help you</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="wrapBlock d-flex align-items-center justify-content-center justify-content-lg-left">
+                        <div>
+                            <i class="far fa-heart"></i>
+                        </div>
+                        <div>
+                            <h5 class="text-uppercase"><a href="#" class="text-decoration-none">UNIQUE BOUQUETS</a></h5>
+                            <p>All our bouquets are special</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="slick">
+        <div class="container">
+
+            <div class="row">
+                <div class="col">
+                    <div class="heading">
+                        <h2>Our clients</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-9">
+                    <div class="slider-for">
+                        <div>
+                            <p>All I can say is WOW! You definitely have a customer for life.
+                                I have been looking for a really high-quality and
+                                affordable flower provider for years, and now I’m so glad I’ve found you.</p>
+                        </div>
+                        <div>
+                            <p>I received bouquets from Florium, and now it’s my #1 floral arrangements provider. The
+                                quality of the flowers
+                                is great they last a long time. And the creativity of the bouquets is wonderful.</p>
+                        </div>
+                        <div>
+                            <p>Thank you so much for delivering beautiful flowers to my parents today. My mother called
+                                to say how
+                                gorgeous they were! I am really delighted with your level of service.</p>
+                        </div>
+                    </div>
+
+                    <div class="slider-nav">
+
+                        <div class="clientBlock text-center">
+                            <img src="img/user-7-87x87.jpg" alt="">
+                            <p class="clientName text-uppercase">
+                                Patrick Goodman
+                            </p>
+                            <p>Client</p>
+                        </div>
+
+                        <div class="clientBlock text-center">
+                            <img src="img/user-8-87x87.jpg" alt="">
+                            <p class="clientName text-uppercase">
+                                Kate Smith
+                            </p>
+                            <p>Client</p>
+                        </div>
+
+                        <div class="clientBlock text-center">
+                            <img src="img/user-9-87x87.jpg" alt="">
+                            <p class="clientName text-uppercase">
+                                Sam Wilson
+                            </p>
+                            <p>Client</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
 
 </body>
 

@@ -7,3 +7,4 @@
 .bowerrc
 gulpfile.js
 *.json
+.gitignore

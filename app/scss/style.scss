@@ -1,18 +1,26 @@
 $fontMain: 'Lora', serif;
 $OpenSans: 'Open Sans', sans-serif;
-$orange: #f75506;
-$grey: #79787f;
+$mainColor: #151515;
+$grey: #777;
 .h100{
     height: 100%;
 }
 
 body {
     font-family: $fontMain;
-    background-color: #79787f;
 }
 //хз откуда, но приходится дописывать
 button:focus {
     outline: none;
+}
+.heading{
+    text-align: center;
+    margin-bottom: 40px;
+    h2{
+        text-transform: uppercase;
+        font-size: 47px;
+        color: #151515;
+    }
 }
 .logo{
     position: relative;
@@ -22,6 +30,7 @@ button:focus {
 }
 header{
     position: relative;
+    height: 100vh;
 }
 .topMenuOnSm{
     position: fixed;
@@ -33,39 +42,12 @@ header{
     padding: 10px;
     .logo{
         margin: 0;
-    }
-    button#togglerMenu{
-        background-color: transparent;
-        border: none;
-        span{
-            width: 30px;
-            height: 3px;
-            background-color: #000;
-            display: inline-block;
-            position: relative;
-            &:after, &:before{
-                content: "";
-                position: absolute;
-                width: 30px;
-                height: 3px;
-                background-color: #000;
-                display: block;    
-            }
-            &:after{
-                top: 10px;
-                left: 0;
-                transform: rotateX(45deg);
-            }
-            &:before{
-                top: -10px;
-                left: 0;
-                transform: rotateX(45deg);
-                transform-origin: 15% 95%;
-            }
-
-        }
+        margin-left: 10px;
+        padding-bottom: 15px;
     }
 }
+
+
 nav{
     position: relative;
     z-index: 2;
@@ -121,73 +103,6 @@ nav{
         .container, .row{
             height: 100vh;
         }
-        .textSlide{
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            color: #fff;
-            h3{
-                font-size: 32px;
-            }
-            h2{
-                font-size: 100px;
-                margin-bottom: 20px;
-            }
-            p{
-                font-size: 18px;
-                font-family: $OpenSans;
-                margin-bottom: 50px;
-            }
-            a{
-                transition: all .3s ease-in-out;
-                z-index: 1;
-                color: #151515;
-                background-color: #ffffff;
-                // border-color: #ffffff;
-                position: relative;
-                overflow: hidden;
-                // display: inline-block;
-                padding: 16px 32px;
-                font-size: 14px;
-                line-height: 2;
-                // border: 2px solid;
-                font-family: $OpenSans;
-                // font-weight: 400;
-                // letter-spacing: 0.025em;
-                // text-transform: uppercase;
-                // white-space: nowrap;
-                // text-overflow: ellipsis;
-                // text-align: center;
-                // cursor: pointer;
-                // vertical-align: middle;
-                // user-select: none;
-                border: none;
-                border-radius: 0;
-                transition: all 250ms ease-in-out;
-                &:after{
-                    background: #fff;
-                    position: absolute;
-                    content: '';
-                    top: 50%;
-                    left: 50%;
-                    width: 110%;
-                    padding-bottom: 110%;
-                    border-radius: 50%;
-                    transform: translate3d(-50%, -50%, 0) scale(1);
-                    transition: inherit;
-                    pointer-events: none;
-                    z-index: -1;
-                }
-                &:hover, &:focus{
-                    color: #ffffff;
-                    border: none;
-                    background-color: #404040;
-                    &:after{
-                        transform: translate3d(-50%, -50%, 0) scale(0);
-                    }
-                }
-            }
-        }
     }
     .owl-nav {
         position: absolute;
@@ -219,3 +134,261 @@ nav{
         }
     }
 }
+
+
+.textSlide{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    h3{
+        font-size: 32px;
+    }
+    h2{
+        font-size: 100px;
+        margin-bottom: 20px;
+    }
+    p{
+        font-size: 18px;
+        font-family: $OpenSans;
+        margin-bottom: 50px;
+    }
+    a{
+        transition: all .3s ease-in-out;
+        z-index: 1;
+        color: #151515;
+        background-color: #ffffff;
+        position: relative;
+        overflow: hidden;
+        padding: 16px 32px;
+        font-size: 14px;
+        line-height: 2;
+        font-family: $OpenSans;
+        border: none;
+        border-radius: 0;
+        transition: all 0.25s ease-in-out;
+        &:after{
+            background: #fff;
+            position: absolute;
+            content: '';
+            top: 50%;
+            left: 50%;
+            width: 110%;
+            padding-bottom: 110%;
+            border-radius: 50%;
+            transform: translate3d(-50%, -50%, 0) scale(1);
+            transition: inherit;
+            pointer-events: none;
+            z-index: -1;
+        }
+        &:hover, &:focus{
+            color: #ffffff;
+            border: none;
+            background-color: #404040;
+            &:after{
+                transform: translate3d(-50%, -50%, 0) scale(0);
+            }
+        }
+    }
+}
+
+section{
+    padding: 70px 0;
+}
+.boxFlower{
+    position: relative;
+    margin-bottom: 50px;
+    img{
+        border-radius: 8px;
+        margin-bottom: 20px;
+    }
+    a{
+        color: $mainColor;
+        transition: color 0.3s;
+        h3{
+            font-size: 18px;
+        }
+        &:hover, &:focus{
+            color: #f74860;
+            transition: color 0.3s;
+        }
+    }
+    p.price{
+        color: $grey;
+        font-size: 15px;
+        span{
+            margin-left: 5px;
+            color: #f74860;
+        }
+    }
+    p.new, p.sale{
+        position: absolute;
+        right: 50%;
+        transform: translateX(50%);
+        top: 20px;
+        text-transform: uppercase;
+        font-size: 14px;
+        padding: 3px 8px;
+    }
+    p.new{
+        background-color: #fff;
+    }
+    p.sale{
+        background-color: #f74860;
+        color: #fff;
+    }
+}
+
+section#digits{
+    p{
+        color: #fff;
+        font-size: 18px;
+        margin-top: 30px;
+    }
+    p.digit{
+        font-size: 48px;
+        &:after{
+            content: '';
+            display: block;
+            width: 40px;
+            height: 1px;
+            background-color: #fff;
+            margin: 20px auto;
+        }
+    }
+}
+
+section#accord{
+    .accordWrap{
+        margin-top: 30px;
+    }
+    .card{
+        border-color: #fff;
+        &:not(:last-of-type){
+            border-bottom: 1px solid rgba(0,0,0,.125);
+        }
+    }
+    .card-header {
+        padding: 20px;
+        background-color: #fff;
+        h2 {
+            button.collapsed{
+                i{
+                    background-color: #fff;
+                    color: #404040;
+                    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+                    transform: rotate(0deg);
+                }
+            }
+            &:hover, &:focus{
+                outline: none;
+                button.collapsed{
+                    i{
+                        transition: background-color 0.3s, color 0.3s, transform 0.3s;
+                        transform: rotate(90deg);
+                    }
+                }
+                button{
+                    i{
+                        transition: background-color 0.3s, color 0.3s, transform 0.3s;
+                        transform: rotate(-90deg);
+                    }
+                }
+            }
+            button{
+                padding: 0;
+                text-transform: uppercase;
+                i{
+                    background-color: #404040;
+                    color: #fff;
+                    margin-right: 20px;
+                    font-size: 20px;
+                    line-height: 42px;
+                    text-align: center;
+                    border: 1px solid rgba(0,0,0,.125);
+                    box-shadow: 0 0 5px 0 rgba(1, 3, 4, 0.19);
+                    width: 42px;
+                    height: 42px;
+                    border-radius: 50%;
+                    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+                    transform: rotate(90deg);
+                }
+            }
+        }
+    }
+    .btn-link{
+        color: $mainColor;
+        text-decoration: none;
+        &:hover, &:focus{
+            text-decoration: none;
+        }
+    }
+    .bonus{
+        margin-top: 60px;
+    }
+    .wrapBlock{
+        margin-bottom: 20px;
+        padding: 42px;
+        border: 1px solid rgba(0,0,0,.125);;
+        i{
+            font-size: 48px;
+            color: #404040;
+            margin-right: 10px;
+        }
+        h5{
+            letter-spacing: .075em;
+            margin-bottom: 10px;
+            a{
+                font-size: 18px;
+                color: $mainColor;
+            }
+        }
+        p{
+            color: $grey;
+            font-family: $OpenSans;
+            margin: 0;
+            font-size: 15px;
+        }
+    }
+}
+
+section#slick{
+    .slider-for{
+        p{
+            font-size: 18px;
+            color: $grey;
+            font-family: $OpenSans;
+        }
+    }
+    .slider-nav{
+        .clientBlock{
+            cursor: pointer;
+            opacity: 0.5;
+            transition: opacity 0.3s;
+            &:hover, &:focus{
+                opacity: 1;
+                transition: opacity 0.3s;
+                outline: none;
+            }
+            &.slick-current {
+                opacity: 1;
+            }
+            img{
+                width: 87px;
+                height: 87px;
+                border-radius: 50%;
+                margin: 20px auto;
+            }
+            p.clientName{
+                font-size: 14px;
+                color: $mainColor;
+                font-family: $OpenSans;
+            }
+            p{
+                color: $grey;
+                margin-bottom: 5px;
+            }
+        }
+    }
+}
+

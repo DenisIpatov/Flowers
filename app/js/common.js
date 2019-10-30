@@ -1,9 +1,9 @@
 $(document).ready(function () {
 
-//     $("#togglerMenu").on("click", function () {
-//         $("#togglerMenu").toggleClass("is-active");
-//         $("ul.menu").toggleClass("anim");
-//     });
+    $(".hamburger").on("click", function () {
+        $(this).toggleClass("is-active");
+        $("ul.menuOnSm").toggleClass("open");
+    });
 
 //     $(window).on("scroll", function () {
 //         if ($(window).scrollTop() + $(window).height() - $("#digits").offset().top > 100) {
@@ -19,31 +19,56 @@ $(document).ready(function () {
 // timer();
 // new WOW().init();
 
-$('.owl-carousel').owlCarousel({
-    loop:true,
-    nav:true,
-    dots: false,
-    items: 1,
-    navText: ['<i class="fas fa-angle-left"></i>',
-    '<i class="fas fa-angle-right"></i>'],
-});
+    $('.owl-carousel').owlCarousel({
+        loop:true,
+        dots: false,
+        items: 1,
+        navText: ['<i class="fas fa-angle-left"></i>',
+        '<i class="fas fa-angle-right"></i>'],
+    });
+
+    $(window).on("scroll", function () {
+        if ($(window).scrollTop() + $(window).height() - $("#digits").offset().top > 100) {
+            runDigit();
+        }
+        if(($(window).scrollTop()) > 70) {
+            $(".fixMenuTop").addClass("fixed");
+        } else {
+            $(".fixMenuTop").removeClass("fixed");
+        }
+    });
 
 // });
 
-// function runDigit() {
-//     $(".digit.notAnim").each(function (i, elem) {
-//         let start = 0;
-//         let end = $(elem).data("digit");
-//         let timer = setInterval(function () {
-//             $(elem).text(start);
-//             start = start + 5;
-//             if (start >= end) {
-//                 clearInterval(timer);
-//                 $(elem).removeClass("notAnim");
-//             }
-//         }, 20);
-//     });
-// };
+function runDigit() {
+    $(".digit.notAnim").each(function (i, elem) {
+        let start = 0;
+        let end = $(elem).data("digit");
+        let timer = setInterval(function () {
+            $(elem).text(start);
+            start = start + 5;
+            if (start >= end) {
+                clearInterval(timer);
+                $(elem).removeClass("notAnim");
+            }
+        }, 20);
+    });
+};
+
+$('.slider-for').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    // fade: true,
+    asNavFor: '.slider-nav'
+  });
+$('.slider-nav').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    asNavFor: '.slider-for',
+    centerMode: true,
+    focusOnSelect: true
+});
 
 // function timer(){
 //     timeend = new Date(2020, 7, 17);
